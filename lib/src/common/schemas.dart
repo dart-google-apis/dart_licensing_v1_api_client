@@ -4,25 +4,25 @@ part of licensing_v1_api_client;
 class LicenseAssignment {
 
   /** ETag of the resource. */
-  String etags;
+  core.String etags;
 
   /** Identifies the resource as a LicenseAssignment. */
-  String kind;
+  core.String kind;
 
   /** Name of the product. */
-  String productId;
+  core.String productId;
 
   /** Link to this page. */
-  String selfLink;
+  core.String selfLink;
 
   /** Name of the sku of the product. */
-  String skuId;
+  core.String skuId;
 
   /** Email id of the user. */
-  String userId;
+  core.String userId;
 
   /** Create new LicenseAssignment from JSON data */
-  LicenseAssignment.fromJson(Map json) {
+  LicenseAssignment.fromJson(core.Map json) {
     if (json.containsKey("etags")) {
       etags = json["etags"];
     }
@@ -44,8 +44,8 @@ class LicenseAssignment {
   }
 
   /** Create JSON Object for LicenseAssignment */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (etags != null) {
       output["etags"] = etags;
@@ -70,7 +70,7 @@ class LicenseAssignment {
   }
 
   /** Return String representation of LicenseAssignment */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -78,18 +78,18 @@ class LicenseAssignment {
 class LicenseAssignmentInsert {
 
   /** Email id of the user */
-  String userId;
+  core.String userId;
 
   /** Create new LicenseAssignmentInsert from JSON data */
-  LicenseAssignmentInsert.fromJson(Map json) {
+  LicenseAssignmentInsert.fromJson(core.Map json) {
     if (json.containsKey("userId")) {
       userId = json["userId"];
     }
   }
 
   /** Create JSON Object for LicenseAssignmentInsert */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (userId != null) {
       output["userId"] = userId;
@@ -99,7 +99,7 @@ class LicenseAssignmentInsert {
   }
 
   /** Return String representation of LicenseAssignmentInsert */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -107,19 +107,19 @@ class LicenseAssignmentInsert {
 class LicenseAssignmentList {
 
   /** ETag of the resource. */
-  String etag;
+  core.String etag;
 
   /** The LicenseAssignments in this page of results. */
-  List<LicenseAssignment> items;
+  core.List<LicenseAssignment> items;
 
   /** Identifies the resource as a collection of LicenseAssignments. */
-  String kind;
+  core.String kind;
 
   /** The continuation token, used to page through large result sets. Provide this value in a subsequent request to return the next page of results. */
-  String nextPageToken;
+  core.String nextPageToken;
 
   /** Create new LicenseAssignmentList from JSON data */
-  LicenseAssignmentList.fromJson(Map json) {
+  LicenseAssignmentList.fromJson(core.Map json) {
     if (json.containsKey("etag")) {
       etag = json["etag"];
     }
@@ -138,14 +138,14 @@ class LicenseAssignmentList {
   }
 
   /** Create JSON Object for LicenseAssignmentList */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (etag != null) {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new List();
+      output["items"] = new core.List();
       items.forEach((item) {
         output["items"].add(item.toJson());
       });
@@ -161,7 +161,7 @@ class LicenseAssignmentList {
   }
 
   /** Return String representation of LicenseAssignmentList */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 

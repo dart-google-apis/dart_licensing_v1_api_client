@@ -16,13 +16,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete(String productId, String skuId, String userId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete(core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (productId == null) paramErrors.add("productId is required");
     if (productId != null) urlParams["productId"] = productId;
     if (skuId == null) paramErrors.add("skuId is required");
@@ -61,13 +61,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignment> get(String productId, String skuId, String userId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignment> get(core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (productId == null) paramErrors.add("productId is required");
     if (productId != null) urlParams["productId"] = productId;
     if (skuId == null) paramErrors.add("skuId is required");
@@ -106,13 +106,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignment> insert(LicenseAssignmentInsert request, String productId, String skuId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignment> insert(LicenseAssignmentInsert request, core.String productId, core.String skuId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (productId == null) paramErrors.add("productId is required");
     if (productId != null) urlParams["productId"] = productId;
     if (skuId == null) paramErrors.add("skuId is required");
@@ -155,13 +155,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignmentList> listForProduct(String productId, String customerId, {int maxResults, String pageToken, Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignmentList> listForProduct(core.String productId, core.String customerId, {core.int maxResults, core.String pageToken, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/users";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (customerId == null) paramErrors.add("customerId is required");
     if (customerId != null) queryParams["customerId"] = customerId;
     if (maxResults != null) queryParams["maxResults"] = maxResults;
@@ -208,13 +208,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignmentList> listForProductAndSku(String productId, String skuId, String customerId, {int maxResults, String pageToken, Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignmentList> listForProductAndSku(core.String productId, core.String skuId, core.String customerId, {core.int maxResults, core.String pageToken, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/users";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (customerId == null) paramErrors.add("customerId is required");
     if (customerId != null) queryParams["customerId"] = customerId;
     if (maxResults != null) queryParams["maxResults"] = maxResults;
@@ -257,13 +257,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignment> patch(LicenseAssignment request, String productId, String skuId, String userId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignment> patch(LicenseAssignment request, core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (productId == null) paramErrors.add("productId is required");
     if (productId != null) urlParams["productId"] = productId;
     if (skuId == null) paramErrors.add("skuId is required");
@@ -304,13 +304,13 @@ class LicenseAssignmentsResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LicenseAssignment> update(LicenseAssignment request, String productId, String skuId, String userId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<LicenseAssignment> update(LicenseAssignment request, core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (productId == null) paramErrors.add("productId is required");
     if (productId != null) urlParams["productId"] = productId;
     if (skuId == null) paramErrors.add("skuId is required");
