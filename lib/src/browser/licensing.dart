@@ -4,8 +4,8 @@ part of licensing_v1_api_browser;
 /** Licensing API to view and manage license for your domain. */
 class Licensing extends BrowserClient {
 
-  LicenseAssignmentsResource _licenseAssignments;
-  LicenseAssignmentsResource get licenseAssignments => _licenseAssignments;
+  LicenseAssignmentsResource_ _licenseAssignments;
+  LicenseAssignmentsResource_ get licenseAssignments => _licenseAssignments;
 
   /**
    * Data format for the response.
@@ -59,6 +59,6 @@ class Licensing extends BrowserClient {
   Licensing([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/apps/licensing/v1/product/";
     rootUrl = "https://www.googleapis.com:443/";
-    _licenseAssignments = new LicenseAssignmentsResource(this);
+    _licenseAssignments = new LicenseAssignmentsResource_(this);
   }
 }
