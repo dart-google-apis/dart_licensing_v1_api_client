@@ -58,7 +58,7 @@ class Licensing extends ConsoleClient {
 
   Licensing([oauth2.OAuth2Console auth]) : super(auth) {
     basePath = "/apps/licensing/v1/product/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _licenseAssignments = new LicenseAssignmentsResource_(this);
   }
 }

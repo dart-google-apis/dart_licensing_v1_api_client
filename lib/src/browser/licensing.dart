@@ -58,7 +58,7 @@ class Licensing extends BrowserClient {
 
   Licensing([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/apps/licensing/v1/product/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _licenseAssignments = new LicenseAssignmentsResource_(this);
   }
 }
