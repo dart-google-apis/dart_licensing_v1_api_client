@@ -17,7 +17,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> delete(core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -38,16 +37,12 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "DELETE", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 
   /**
@@ -62,7 +57,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignment> get(core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -83,16 +77,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignment.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignment.fromJson(data));
   }
 
   /**
@@ -107,7 +98,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignment> insert(LicenseAssignmentInsert request, core.String productId, core.String skuId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -126,16 +116,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "POST", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignment.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignment.fromJson(data));
   }
 
   /**
@@ -156,7 +143,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignmentList> listForProduct(core.String productId, core.String customerId, {core.int maxResults, core.String pageToken, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/users";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -177,16 +163,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignmentList.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignmentList.fromJson(data));
   }
 
   /**
@@ -209,7 +192,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignmentList> listForProductAndSku(core.String productId, core.String skuId, core.String customerId, {core.int maxResults, core.String pageToken, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/users";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -232,16 +214,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignmentList.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignmentList.fromJson(data));
   }
 
   /**
@@ -258,7 +237,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignment> patch(LicenseAssignment request, core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -279,16 +257,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "PATCH", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignment.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignment.fromJson(data));
   }
 
   /**
@@ -305,7 +280,6 @@ class LicenseAssignmentsResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LicenseAssignment> update(LicenseAssignment request, core.String productId, core.String skuId, core.String userId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "{productId}/sku/{skuId}/user/{userId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -326,16 +300,13 @@ class LicenseAssignmentsResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "PUT", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LicenseAssignment.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LicenseAssignment.fromJson(data));
   }
 }
 
