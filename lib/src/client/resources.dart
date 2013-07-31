@@ -1,9 +1,11 @@
-part of licensing_v1_api_client;
+part of licensing_v1_api;
 
-class LicenseAssignmentsResource_ extends Resource {
+class LicenseAssignmentsResource_ {
 
-  LicenseAssignmentsResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  LicenseAssignmentsResource_(Client client) :
+      _client = client;
 
   /**
    * Revoke License.

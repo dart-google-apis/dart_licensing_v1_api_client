@@ -1,14 +1,15 @@
-library licensing_v1_api_console;
+library licensing_v1_api.console;
 
-import "licensing_v1_api_client.dart";
-export "licensing_v1_api_client.dart";
-
-import "dart:core" as core;
-import "dart:io" as io;
-import "dart:async" as async;
-import "dart:json" as JSON;
-import "package:http/http.dart" as http;
 import "package:google_oauth2_client/google_oauth2_console.dart" as oauth2;
 
-part "src/console/console_client.dart";
-part "src/console/licensing.dart";
+import 'package:google_licensing_v1_api/src/cloud_api_console.dart';
+
+import "package:google_licensing_v1_api/licensing_v1_api_client.dart";
+
+/** Licensing API to view and manage license for your domain. */
+class Licensing extends Client with ConsoleClient {
+
+  final oauth2.OAuth2Console auth;
+
+  Licensing([oauth2.OAuth2Console this.auth]);
+}

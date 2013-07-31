@@ -1,14 +1,14 @@
-library licensing_v1_api_browser;
+library licensing_v1_api.browser;
 
-import "licensing_v1_api_client.dart";
-export "licensing_v1_api_client.dart";
-
-import "dart:core" as core;
-import "dart:html" as html;
-import "dart:async" as async;
-import "dart:json" as JSON;
-import "package:js/js.dart" as js;
 import "package:google_oauth2_client/google_oauth2_browser.dart" as oauth;
 
-part "src/browser/browser_client.dart";
-part "src/browser/licensing.dart";
+import 'package:google_licensing_v1_api/src/cloud_api_browser.dart';
+import "package:google_licensing_v1_api/licensing_v1_api_client.dart";
+
+/** Licensing API to view and manage license for your domain. */
+class Licensing extends Client with BrowserClient {
+
+  final oauth.OAuth2 auth;
+
+  Licensing([oauth.OAuth2 this.auth]);
+}

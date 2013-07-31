@@ -1,4 +1,4 @@
-part of licensing_v1_api_client;
+part of licensing_v1_api;
 
 /** Template for LiscenseAssignment Resource */
 class LicenseAssignment {
@@ -124,10 +124,7 @@ class LicenseAssignmentList {
       etag = json["etag"];
     }
     if (json.containsKey("items")) {
-      items = [];
-      json["items"].forEach((item) {
-        items.add(new LicenseAssignment.fromJson(item));
-      });
+      items = json["items"].map((itemsItem) => new LicenseAssignment.fromJson(itemsItem)).toList();
     }
     if (json.containsKey("kind")) {
       kind = json["kind"];
@@ -145,10 +142,7 @@ class LicenseAssignmentList {
       output["etag"] = etag;
     }
     if (items != null) {
-      output["items"] = new core.List();
-      items.forEach((item) {
-        output["items"].add(item.toJson());
-      });
+      output["items"] = items.map((itemsItem) => itemsItem.toJson()).toList();
     }
     if (kind != null) {
       output["kind"] = kind;
@@ -165,3 +159,16 @@ class LicenseAssignmentList {
 
 }
 
+core.Map _mapMap(core.Map source, [core.Object convert(core.Object source) = null]) {
+  assert(source != null);
+  var result = new dart_collection.LinkedHashMap();
+  source.forEach((core.String key, value) {
+    assert(key != null);
+    if(convert == null) {
+      result[key] = value;
+    } else {
+      result[key] = convert(value);
+    }
+  });
+  return result;
+}
