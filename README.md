@@ -14,7 +14,7 @@ Adding dependency to pubspec.yaml
 
 ```
   dependencies:
-    google_licensing_v1_api: '>=0.3.8'
+    google_licensing_v1_api: '>=0.4.9'
 ```
 
 For web applications:

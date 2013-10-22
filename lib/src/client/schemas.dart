@@ -70,7 +70,7 @@ class LicenseAssignment {
   }
 
   /** Return String representation of LicenseAssignment */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -99,7 +99,7 @@ class LicenseAssignmentInsert {
   }
 
   /** Return String representation of LicenseAssignmentInsert */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -155,7 +155,7 @@ class LicenseAssignmentList {
   }
 
   /** Return String representation of LicenseAssignmentList */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
